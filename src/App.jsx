@@ -99,12 +99,12 @@ export default function Portfolio() {
       <style>{`
         @media (max-width: 640px) {
           .hero-grid { grid-template-columns: 1fr !important; }
-          .hero-grid .venn-wrap { display: flex; justify-content: center; margin-top: 32px; }
+          .venn-wrap { display: flex !important; justify-content: center !important; margin-top: 32px !important; }
           .hero-h1 { font-size: 32px !important; }
           .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
           .cards-grid { grid-template-columns: 1fr !important; }
-          .cta-row { flex-direction: column !important; }
-          .cta-row a { text-align: center; justify-content: center; }
+          .cta-row { flex-direction: column !important; gap: 10px !important; }
+          .cta-row a { text-align: center !important; justify-content: center !important; width: 100% !important; box-sizing: border-box !important; }
           .inner-pad { padding: 0 16px 60px !important; }
           .nav-pad { padding: 20px 0 24px !important; margin-bottom: 40px !important; }
         }
@@ -177,7 +177,7 @@ export default function Portfolio() {
           </div>
 
           <div className="venn-wrap" style={{ flexShrink: 0 }}>
-            <VennDiagram t={t} size={200} />
+            <VennDiagram t={t} size={180} />
           </div>
         </div>
 
@@ -198,7 +198,7 @@ export default function Portfolio() {
 
         {/* AT A GLANCE */}
         <SectionDivider label="At a glance" t={t} sans={sans} />
-        <div className="stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 10, marginBottom: 64 }}>
+        <div className="stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: 10, marginBottom: 64 }}>
           {STATS.map((st, i) => (
             <div key={i} style={{ background: st.highlight ? t.accentFaint : t.card, border: `0.5px solid ${st.highlight ? t.accentBorder : t.border}`, borderRadius: 10, padding: "18px 12px", textAlign: "center" }}>
               {st.highlight ? (
