@@ -15,72 +15,135 @@ const T = {
   },
 };
 
-const LIFECYCLE = [
-  "Strategy & competition","Acquisition","UX / UI","Multichannel comms",
-  "Conversion","Retention","Revenue management","Service experience",
-];
+const CONTENT = {
+  en: {
+    role1: "Lead Business Analyst",
+    role2: "Category Manager · Applied AI for Business",
+    tagline1: "Simplifying data.",
+    tagline2: "Amplifying impact.",
+    ctaLinkedin: "↗ Connect on LinkedIn",
+    ctaCV: "↓ Download CV",
+    venn: { top: "BUSINESS", left: "DATA", right: "AI", center: "IMPACT" },
+    sectionAbout: "About",
+    bio: [
+      <>I've spent 10+ years in online business — Travel Tech and EdTech — leading analytical teams and managing categories across Spain, Portugal and Latam. I've worked across every stage of the user lifecycle: from first acquisition to retention, revenue management, service experience and multichannel communication.</>,
+      <>Throughout my career I've seen how <strong>getting data right unlocks real business impact and uncovers opportunities that would otherwise stay hidden.</strong> The problem is rarely a lack of data — it's <strong>how data is managed internally</strong>: metrics defined differently by each team, logic that lives in someone's head, operational systems that don't talk to each other, gaps in how data gets captured, and vanity KPIs that everyone monitors but nobody acts on. <strong>When intuition and data don't point in the same direction</strong>, the right analytical foundation makes all the difference.</>,
+      <>Now I'm building on that foundation — exploring how AI can make analytical knowledge scalable and consistent, so teams stop debating definitions and start making impact.</>,
+    ],
+    sectionGlance: "At a glance",
+    stats: [
+      { num: "Business mind,\ndata fluent", highlight: true },
+      { num: "10+", label: "Years\nleading teams" },
+      { num: "9", label: "Years in\nTravel Tech" },
+      { num: "5", label: "Years in\nEdTech" },
+      { num: "4", label: "Countries\nworked in" },
+    ],
+    sectionLifecycle: "User lifecycle coverage",
+    lifecycle: ["Strategy & competition","Acquisition","UX / UI","Multichannel comms","Conversion","Retention","Revenue management","Service experience"],
+    sectionBring: "What I bring",
+    cards: [
+      { num: "01", title: "Impact-driven analysis", body: "Every insight pushed until it changes a decision. Not dashboards for the sake of it." },
+      { num: "02", title: "Team leadership", body: "10+ years building and leading analytical teams across two industries and multiple markets." },
+      { num: "03", title: "Pricing & P&L", body: "Metasearch, pricing optimization and P&L ownership in competitive travel markets." },
+      { num: "04", title: "AI applied to business", body: "Using AI to unlock real impact through data — building scalable systems that align metrics, ensure data quality and turn insight into action.", inProgress: true, badge: "in progress" },
+    ],
+    sectionLead: "How I lead",
+    leadership: [
+      { title: "Leading by example", body: "I stay close to the work — shaping frameworks, unblocking problems, and helping the team move faster and with more confidence. Always keen to join initiatives hands-on when needed to understand real delivery challenges and stay close to the team's day-to-day." },
+      { title: "Transparency first", body: "Creating space where teams feel safe to test ideas, take controlled risks and speak up — while keeping a clear eye on impact. I believe honest, constructive feedback flows in every direction — people grow when they hear the truth delivered with care." },
+      { title: "Flexibility with accountability", body: "Results matter more than rigid schedules or extreme presenteeism. I trust people to own their work and deliver — and I give them the conditions to do it." },
+    ],
+    sectionFootprint: "International footprint",
+    footprint: [
+      { icon: "⌂", text: "Madrid, Spain", sub: "born & raised" },
+      { icon: "◈", text: "Leeuwarden, NL", sub: "Erasmus" },
+      { icon: "◆", text: "Milan, Italy", sub: "work" },
+      { icon: "◆", text: "Chiasso, Switzerland", sub: "work" },
+      { icon: "◆", text: "London, UK", sub: "work" },
+    ],
+    sectionAreas: "Areas",
+    pillsAccent: ["Impact-driven analysis", "Team leadership", "Category Management", "Business Analysis"],
+    pillsPlain: ["Pricing & P&L", "Metric governance", "Multichannel communications", "Travel Tech · EdTech", "User lifecycle", "Data storytelling"],
+    beyond: "Outside the office — family, cooking, open spaces and the occasional idea that starts on a walk and ends up in a prototype.",
+    footerLoc: "Madrid, Spain",
+    toggleLang: "ES",
+    toggleDarkOn: "☀  light",
+    toggleDarkOff: "◑  dark",
+  },
+  es: {
+    role1: "Lead Business Analyst",
+    role2: "Category Manager · IA Aplicada al Negocio",
+    tagline1: "Simplificando datos.",
+    tagline2: "Amplificando impacto.",
+    ctaLinkedin: "↗ Conectar en LinkedIn",
+    ctaCV: "↓ Descargar CV",
+    venn: { top: "NEGOCIO", left: "DATOS", right: "IA", center: "IMPACTO" },
+    sectionAbout: "Sobre mí",
+    bio: [
+      <>Llevo más de 10 años en negocio digital — Travel Tech y EdTech — liderando equipos de analítica y gestionando categorías en España, Portugal y Latam. He trabajado en todas las fases del ciclo de vida del usuario: desde la captación hasta la retención, revenue management, experiencia de servicio y comunicación multicanal.</>,
+      <>A lo largo de mi trayectoria he comprobado cómo <strong>un uso adecuado del dato permite desbloquear impacto real y descubrir oportunidades de negocio que de otro modo permanecerían ocultas.</strong> El problema rara vez es la falta de datos — es <strong>cómo se gestiona el dato internamente</strong>: métricas definidas de forma distinta según el equipo, lógica que vive en la cabeza de alguien, sistemas que no se hablan entre sí, lagunas en la captura, y KPIs superficiales que todo el mundo monitoriza pero nadie actúa sobre ellos. <strong>Cuando la intuición y el dato no apuntan en la misma dirección</strong>, una base analítica sólida marca la diferencia.</>,
+      <>Ahora construyo sobre esa base — explorando cómo la IA puede hacer el conocimiento analítico escalable y consistente, para que los equipos dejen de debatir definiciones y empiecen a generar impacto real.</>,
+    ],
+    sectionGlance: "De un vistazo",
+    stats: [
+      { num: "Mentalidad\nde negocio,\nfluido en datos", highlight: true },
+      { num: "10+", label: "Años\ndirigiendo equipos" },
+      { num: "9", label: "Años en\nTravel Tech" },
+      { num: "5", label: "Años en\nEdTech" },
+      { num: "4", label: "Países\ntrabajados" },
+    ],
+    sectionLifecycle: "Cobertura del ciclo de vida",
+    lifecycle: ["Estrategia y competencia","Captación","UX / UI","Comunicación multicanal","Conversión","Retención","Revenue management","Experiencia de servicio"],
+    sectionBring: "Lo que aporto",
+    cards: [
+      { num: "01", title: "Análisis orientado al impacto", body: "El esfuerzo analítico cobra sentido cuando permite tomar mejores decisiones. Información sin accionabilidad no genera impacto." },
+      { num: "02", title: "Liderazgo de equipos", body: "Más de 10 años construyendo y liderando equipos de analítica en dos industrias y múltiples mercados." },
+      { num: "03", title: "Pricing y P&L", body: "Metasearch, optimización de pricing y ownership del P&L en mercados de viajes altamente competitivos." },
+      { num: "04", title: "IA aplicada al negocio", body: "Usar la IA para desbloquear impacto real a través del dato — construyendo sistemas escalables que alinean métricas, aseguran la calidad del dato y convierten el insight en acción.", inProgress: true, badge: "en desarrollo" },
+    ],
+    sectionLead: "Cómo lidero",
+    leadership: [
+      { title: "Liderando con el ejemplo", body: "Me mantengo cerca del trabajo — definiendo el enfoque, desbloqueando problemas y ayudando al equipo a avanzar con más confianza. Siempre dispuesto a involucrarme de forma directa en iniciativas cuando hace falta para entender los retos reales del día a día del equipo." },
+      { title: "Transparencia ante todo", body: "Crear un espacio donde el equipo se sienta seguro para probar ideas, asumir riesgos controlados y expresarse — sin perder el foco en el impacto. Creo en los equipos en los que el feedback honesto y constructivo fluye en todas las direcciones, creando un escenario de mejora continua." },
+      { title: "Flexibilidad con responsabilidad", body: "Los resultados importan más que los horarios rígidos o el presentismo extremo. Confío en que las personas se apropien de su trabajo y lo entreguen — y les doy las condiciones para lograrlo." },
+    ],
+    sectionFootprint: "Huella internacional",
+    footprint: [
+      { icon: "⌂", text: "Madrid, España", sub: "origen" },
+      { icon: "◈", text: "Leeuwarden, Países Bajos", sub: "Erasmus" },
+      { icon: "◆", text: "Milán, Italia", sub: "trabajo" },
+      { icon: "◆", text: "Chiasso, Suiza", sub: "trabajo" },
+      { icon: "◆", text: "Londres, Reino Unido", sub: "trabajo" },
+    ],
+    sectionAreas: "Áreas",
+    pillsAccent: ["Análisis orientado al impacto", "Liderazgo de equipos", "Gestión de categorías", "Análisis de negocio"],
+    pillsPlain: ["Pricing y P&L", "Gobernanza de métricas", "Comunicación multicanal", "Travel Tech · EdTech", "Ciclo de vida del usuario", "Data storytelling"],
+    beyond: "Fuera de la oficina — familia, cocina, espacios abiertos y alguna idea que empieza en un paseo y acaba en un prototipo.",
+    footerLoc: "Madrid, España",
+    toggleLang: "EN",
+    toggleDarkOn: "☀  claro",
+    toggleDarkOff: "◑  oscuro",
+  },
+};
 
-const STATS = [
-  { num: "Business mind,\ndata fluent", highlight: true },
-  { num: "10+", label: "Years\nleading teams" },
-  { num: "9", label: "Years in\nTravel Tech" },
-  { num: "5", label: "Years in\nEdTech" },
-  { num: "4", label: "Countries\nworked in" },
-];
-
-const CARDS = [
-  { num: "01", title: "Impact-driven analysis", body: "Every insight pushed until it changes a decision. Not dashboards for the sake of it." },
-  { num: "02", title: "Team leadership", body: "10+ years building and leading analytical teams across two industries and multiple markets." },
-  { num: "03", title: "Pricing & P&L", body: "Metasearch, pricing optimization and P&L ownership in competitive travel markets." },
-  { num: "04", title: "AI applied to business", body: "Using AI to unlock real impact through data — building scalable systems that align metrics, ensure data quality and turn insight into action.", inProgress: true },
-];
-
-const LEADERSHIP = [
-  { title: "Leading by example", body: "I stay close to the work — shaping frameworks, unblocking problems, and helping the team move faster and with more confidence. Always keen to join initiatives hands-on when needed to understand real delivery challenges and stay close to the team's day-to-day." },
-  { title: "Transparency first", body: "Creating space where teams feel safe to test ideas, take controlled risks and speak up — while keeping a clear eye on impact. I believe honest, constructive feedback flows in every direction — people grow when they hear the truth delivered with care." },
-  { title: "Flexibility with accountability", body: "Results matter more than rigid schedules or extreme presenteeism. I trust people to own their work and deliver — and I give them the conditions to do it." },
-];
-
-const FOOTPRINT = [
-  { icon: "⌂", text: "Madrid, Spain", sub: "born & raised" },
-  { icon: "◈", text: "Leeuwarden, NL", sub: "Erasmus" },
-  { icon: "◆", text: "Milan, Italy", sub: "work" },
-  { icon: "◆", text: "Chiasso, Switzerland", sub: "work" },
-  { icon: "◆", text: "London, UK", sub: "work" },
-];
-
-const PILLS_ACCENT = ["Impact-driven analysis", "Team leadership", "Category Management", "Business Analysis"];
-const PILLS_PLAIN = ["Pricing & P&L", "Metric governance", "Multichannel communications", "Travel Tech · EdTech", "User lifecycle", "Data storytelling"];
-
-function VennDiagram({ t, size = 220 }) {
+function VennDiagram({ t, size = 220, labels }) {
   return (
     <svg viewBox="0 0 260 220" width={size} height={size} style={{ display: "block" }}>
       <defs>
         <clipPath id="c1"><circle cx="130" cy="72" r="70"/></clipPath>
         <clipPath id="c2"><circle cx="90" cy="148" r="70"/></clipPath>
         <clipPath id="c3"><circle cx="170" cy="148" r="70"/></clipPath>
-        <clipPath id="c12">
-          <rect x="0" y="0" width="260" height="220"/>
-        </clipPath>
       </defs>
-      {/* Circles outline only */}
       <circle cx="130" cy="72" r="70" fill="none" stroke={t.accentBorder} strokeWidth="0.8"/>
       <circle cx="90" cy="148" r="70" fill="none" stroke={t.accentBorder} strokeWidth="0.8"/>
       <circle cx="170" cy="148" r="70" fill="none" stroke={t.accentBorder} strokeWidth="0.8"/>
-      {/* Three petals — each is intersection of exactly two circles, drawn once with same opacity */}
-      {/* Petal top: c1 ∩ c2 */}
       <circle cx="130" cy="72" r="70" fill={t.accent} fillOpacity="0.82" clipPath="url(#c2)"/>
-      {/* Petal bottom-left: c2 ∩ c3 */}
       <circle cx="90" cy="148" r="70" fill={t.accent} fillOpacity="0.82" clipPath="url(#c3)"/>
-      {/* Petal bottom-right: c1 ∩ c3 */}
       <circle cx="170" cy="148" r="70" fill={t.accent} fillOpacity="0.82" clipPath="url(#c1)"/>
-
-      {/* Labels halfway between circle center and outer edge */}
-      <text x="130" y="44" textAnchor="middle" dominantBaseline="middle" fontSize="11" fontFamily="'Helvetica Neue',sans-serif" letterSpacing="0.1em" fill={t.textSub} fontWeight="400">BUSINESS</text>
-      <text x="68" y="172" textAnchor="middle" dominantBaseline="middle" fontSize="11" fontFamily="'Helvetica Neue',sans-serif" letterSpacing="0.1em" fill={t.textSub} fontWeight="400">DATA</text>
-      <text x="192" y="172" textAnchor="middle" dominantBaseline="middle" fontSize="11" fontFamily="'Helvetica Neue',sans-serif" letterSpacing="0.1em" fill={t.textSub} fontWeight="400">AI</text>
-      {/* IMPACT label */}
-      <text x="130" y="122" textAnchor="middle" fontSize="13" fontFamily="'Georgia',serif" fill="#FFFFFF" fontWeight="700" letterSpacing="0.06em">IMPACT</text>
+      <text x="130" y="44" textAnchor="middle" dominantBaseline="middle" fontSize="11" fontFamily="'Helvetica Neue',sans-serif" letterSpacing="0.1em" fill={t.textSub} fontWeight="400">{labels.top}</text>
+      <text x="68" y="172" textAnchor="middle" dominantBaseline="middle" fontSize="11" fontFamily="'Helvetica Neue',sans-serif" letterSpacing="0.1em" fill={t.textSub} fontWeight="400">{labels.left}</text>
+      <text x="192" y="172" textAnchor="middle" dominantBaseline="middle" fontSize="11" fontFamily="'Helvetica Neue',sans-serif" letterSpacing="0.1em" fill={t.textSub} fontWeight="400">{labels.right}</text>
+      <text x="130" y="122" textAnchor="middle" fontSize="13" fontFamily="'Georgia',serif" fill="#FFFFFF" fontWeight="700" letterSpacing="0.06em">{labels.center}</text>
     </svg>
   );
 }
@@ -97,11 +160,11 @@ function SectionDivider({ label, t, sans }) {
 
 export default function Portfolio() {
   const [dark, setDark] = useState(false);
+  const [lang, setLang] = useState("en");
   const t = dark ? T.dark : T.light;
+  const c = CONTENT[lang];
   const sans = "'Helvetica Neue', Arial, sans-serif";
   const serif = "'Georgia', 'Times New Roman', serif";
-
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 640;
 
   return (
     <div style={{ background: t.bg, minHeight: "100vh", transition: "all 0.35s ease", color: t.text }}>
@@ -129,12 +192,20 @@ export default function Portfolio() {
           <span style={{ fontFamily: sans, fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: t.accent, fontWeight: 500 }}>
             David Vaquero
           </span>
-          <button
-            onClick={() => setDark(!dark)}
-            style={{ background: dark ? t.accentFaint : "transparent", border: `0.5px solid ${t.border}`, borderRadius: 24, padding: "6px 16px", fontSize: 11, fontFamily: sans, color: t.textSub, cursor: "pointer", letterSpacing: "0.06em", transition: "all 0.2s" }}
-          >
-            {dark ? "☀  light" : "◑  dark"}
-          </button>
+          <div style={{ display: "flex", gap: 8 }}>
+            <button
+              onClick={() => setLang(lang === "en" ? "es" : "en")}
+              style={{ background: "transparent", border: `0.5px solid ${t.border}`, borderRadius: 24, padding: "6px 14px", fontSize: 11, fontFamily: sans, color: t.textSub, cursor: "pointer", letterSpacing: "0.06em", transition: "all 0.2s" }}
+            >
+              {c.toggleLang}
+            </button>
+            <button
+              onClick={() => setDark(!dark)}
+              style={{ background: dark ? t.accentFaint : "transparent", border: `0.5px solid ${t.border}`, borderRadius: 24, padding: "6px 16px", fontSize: 11, fontFamily: sans, color: t.textSub, cursor: "pointer", letterSpacing: "0.06em", transition: "all 0.2s" }}
+            >
+              {dark ? c.toggleDarkOn : c.toggleDarkOff}
+            </button>
+          </div>
         </nav>
 
         {/* HERO */}
@@ -142,17 +213,11 @@ export default function Portfolio() {
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 18, marginBottom: 24 }}>
               <div style={{ width: 68, height: 68, borderRadius: "50%", background: t.accentFaint, border: `1px solid ${t.accentBorder}`, flexShrink: 0, overflow: "hidden" }}>
-                <img
-                  src="/david.jpg"
-                  alt="David Vaquero"
-                  width={68}
-                  height={68}
-                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", borderRadius: "50%" }}
-                />
+                <img src="/david.jpg" alt="David Vaquero" width={68} height={68} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", borderRadius: "50%" }}/>
               </div>
               <div>
-                <p style={{ fontFamily: sans, fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: t.textMuted, marginBottom: 4 }}>Lead Business Analyst</p>
-                <p style={{ fontFamily: sans, fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: t.textMuted }}>Category Manager · Applied AI for Business</p>
+                <p style={{ fontFamily: sans, fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: t.textMuted, marginBottom: 4 }}>{c.role1}</p>
+                <p style={{ fontFamily: sans, fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: t.textMuted }}>{c.role2}</p>
               </div>
             </div>
 
@@ -162,53 +227,38 @@ export default function Portfolio() {
             </h1>
 
             <p style={{ fontFamily: serif, fontSize: 17, fontStyle: "italic", color: t.textSub, lineHeight: 1.6, borderLeft: `2px solid ${t.accent}`, paddingLeft: 16, marginBottom: 28 }}>
-              Simplifying data.<br />
-              <span style={{ color: t.accent }}>Amplifying impact.</span>
+              {c.tagline1}<br />
+              <span style={{ color: t.accent }}>{c.tagline2}</span>
             </p>
 
-            {/* PRIMARY CTAs */}
             <div className="cta-row" style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <a
-                href="https://www.linkedin.com/in/dvaquerog/"
-                target="_blank" rel="noreferrer"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: t.accent, color: "#F0EDE8", fontFamily: sans, fontSize: 12, fontWeight: 500, letterSpacing: "0.06em", textTransform: "uppercase", textDecoration: "none", padding: "11px 22px", borderRadius: 999 }}
-              >
-                ↗ Connect on LinkedIn
+              <a href="https://www.linkedin.com/in/dvaquerog/" target="_blank" rel="noreferrer"
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: t.accent, color: "#F0EDE8", fontFamily: sans, fontSize: 12, fontWeight: 500, letterSpacing: "0.06em", textTransform: "uppercase", textDecoration: "none", padding: "11px 22px", borderRadius: 999 }}>
+                {c.ctaLinkedin}
               </a>
-              <a
-                href="/cv-david.pdf"
-                target="_blank" rel="noreferrer"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: t.accent, fontFamily: sans, fontSize: 12, fontWeight: 500, letterSpacing: "0.06em", textTransform: "uppercase", textDecoration: "none", padding: "11px 22px", borderRadius: 999, border: `0.5px solid ${t.accentBorder}` }}
-              >
-                ↓ Download CV
+              <a href="/cv-david.pdf" target="_blank" rel="noreferrer"
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: t.accent, fontFamily: sans, fontSize: 12, fontWeight: 500, letterSpacing: "0.06em", textTransform: "uppercase", textDecoration: "none", padding: "11px 22px", borderRadius: 999, border: `0.5px solid ${t.accentBorder}` }}>
+                {c.ctaCV}
               </a>
             </div>
           </div>
 
           <div className="venn-wrap" style={{ flexShrink: 0, margin: "-10px -10px -10px 0" }}>
-            <VennDiagram t={t} size={240} />
+            <VennDiagram t={t} size={240} labels={c.venn} />
           </div>
         </div>
 
-        {/* ABOUT DIVIDER */}
-        <SectionDivider label="About" t={t} sans={sans} />
+        {/* ABOUT */}
+        <SectionDivider label={c.sectionAbout} t={t} sans={sans} />
         <div style={{ height: 36 }} />
-
-        {/* BIO */}
         <p style={{ fontFamily: sans, fontSize: 15, color: t.textSub, lineHeight: 1.85, marginBottom: 64 }}>
-          I've spent 10+ years in online business — Travel Tech and EdTech — leading analytical teams and managing categories across Spain, Portugal and Latam. I've worked across every stage of the user lifecycle: from first acquisition to retention, revenue management, service experience and multichannel communication.
-          <br /><br />
-          That end-to-end view taught me something:{" "}
-          <span style={{ color: t.text, fontWeight: 500 }}>the bottleneck is rarely the data itself.</span>{" "}
-          It's everything around it — metrics defined differently by each team, logic that lives in someone's head, operational systems that don't talk to each other, gaps and errors in how data gets captured in the first place, and vanity KPIs that everyone monitors but nobody acts on. Decisions end up made on gut when the data says otherwise.
-          <br /><br />
-          Now I'm building on that foundation — exploring how AI can make analytical knowledge scalable and consistent, so teams stop debating definitions and start making impact.
+          {c.bio[0]}<br /><br />{c.bio[1]}<br /><br />{c.bio[2]}
         </p>
 
         {/* AT A GLANCE */}
-        <SectionDivider label="At a glance" t={t} sans={sans} />
+        <SectionDivider label={c.sectionGlance} t={t} sans={sans} />
         <div className="stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: 10, marginBottom: 64 }}>
-          {STATS.map((st, i) => (
+          {c.stats.map((st, i) => (
             <div key={i} style={{ background: st.highlight ? t.accentFaint : t.card, border: `0.5px solid ${st.highlight ? t.accentBorder : t.border}`, borderRadius: 10, padding: "18px 12px", textAlign: "center" }}>
               {st.highlight ? (
                 <div style={{ fontFamily: sans, fontSize: 11, fontWeight: 500, color: t.accentText, lineHeight: 1.5, letterSpacing: "0.02em" }}>
@@ -227,32 +277,30 @@ export default function Portfolio() {
         </div>
 
         {/* LIFECYCLE */}
-        <SectionDivider label="User lifecycle coverage" t={t} sans={sans} />
+        <SectionDivider label={c.sectionLifecycle} t={t} sans={sans} />
         <div style={{ display: "flex", flexWrap: "wrap", gap: 6, alignItems: "center", marginBottom: 64 }}>
-          {LIFECYCLE.map((item, i) => (
+          {c.lifecycle.map((item, i) => (
             <div key={i} style={{ display: "flex", alignItems: "center", gap: 6 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 7, background: t.card, border: `0.5px solid ${t.border}`, borderRadius: 999, padding: "5px 13px" }}>
-                <span style={{ fontFamily: sans, fontSize: 10, letterSpacing: "0.06em", color: t.accent, fontWeight: 600, opacity: 0.6 }}>
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+                <span style={{ fontFamily: sans, fontSize: 10, letterSpacing: "0.06em", color: t.accent, fontWeight: 600, opacity: 0.6 }}>{String(i + 1).padStart(2, "0")}</span>
                 <span style={{ fontFamily: sans, fontSize: 11, color: t.textSub }}>{item}</span>
               </div>
-              {i < LIFECYCLE.length - 1 && <span style={{ fontSize: 10, color: t.textMuted }}>›</span>}
+              {i < c.lifecycle.length - 1 && <span style={{ fontSize: 10, color: t.textMuted }}>›</span>}
             </div>
           ))}
         </div>
 
         {/* WHAT I BRING */}
-        <SectionDivider label="What I bring" t={t} sans={sans} />
+        <SectionDivider label={c.sectionBring} t={t} sans={sans} />
         <div className="cards-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(165px, 1fr))", gap: 12, marginBottom: 64 }}>
-          {CARDS.map((card, i) => (
+          {c.cards.map((card, i) => (
             <div key={i} style={{ background: card.inProgress ? t.warnBg : t.card, border: `0.5px solid ${card.inProgress ? t.warnBorder : t.border}`, borderRadius: 12, padding: "20px 18px", display: "flex", flexDirection: "column", gap: 10 }}>
               <div style={{ fontFamily: sans, fontSize: 10, fontWeight: 600, letterSpacing: "0.14em", color: card.inProgress ? t.warn : t.accent, opacity: card.inProgress ? 1 : 0.7 }}>{card.num}</div>
               <div style={{ fontFamily: sans, fontSize: 13, fontWeight: 500, color: card.inProgress ? t.warn : t.text, lineHeight: 1.3 }}>{card.title}</div>
               <div style={{ fontFamily: sans, fontSize: 12, color: card.inProgress ? t.warn : t.textSub, lineHeight: 1.6, opacity: card.inProgress ? 0.85 : 1, flex: 1 }}>{card.body}</div>
               {card.inProgress && (
                 <span style={{ alignSelf: "flex-start", fontFamily: sans, fontSize: 9, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", padding: "3px 9px", borderRadius: 999, background: t.warnBg, border: `0.5px solid ${t.warnBorder}`, color: t.warn }}>
-                  in progress
+                  {card.badge}
                 </span>
               )}
             </div>
@@ -260,13 +308,11 @@ export default function Portfolio() {
         </div>
 
         {/* HOW I LEAD */}
-        <SectionDivider label="How I lead" t={t} sans={sans} />
+        <SectionDivider label={c.sectionLead} t={t} sans={sans} />
         <div style={{ marginBottom: 64 }}>
-          {LEADERSHIP.map((item, i) => (
-            <div key={i} style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "0 24px", padding: "20px 0", borderBottom: i < LEADERSHIP.length - 1 ? `0.5px solid ${t.borderFaint}` : "none", alignItems: "start" }}>
-              <div style={{ fontFamily: sans, fontSize: 10, fontWeight: 600, letterSpacing: "0.12em", color: t.accent, opacity: 0.6, paddingTop: 3 }}>
-                {String(i + 1).padStart(2, "0")}
-              </div>
+          {c.leadership.map((item, i) => (
+            <div key={i} style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "0 24px", padding: "20px 0", borderBottom: i < c.leadership.length - 1 ? `0.5px solid ${t.borderFaint}` : "none", alignItems: "start" }}>
+              <div style={{ fontFamily: sans, fontSize: 10, fontWeight: 600, letterSpacing: "0.12em", color: t.accent, opacity: 0.6, paddingTop: 3 }}>{String(i + 1).padStart(2, "0")}</div>
               <div>
                 <div style={{ fontFamily: serif, fontSize: 15, fontWeight: 400, color: t.text, marginBottom: 6, fontStyle: "italic" }}>{item.title}</div>
                 <div style={{ fontFamily: sans, fontSize: 13, color: t.textSub, lineHeight: 1.7 }}>{item.body}</div>
@@ -276,9 +322,9 @@ export default function Portfolio() {
         </div>
 
         {/* FOOTPRINT */}
-        <SectionDivider label="International footprint" t={t} sans={sans} />
+        <SectionDivider label={c.sectionFootprint} t={t} sans={sans} />
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 64 }}>
-          {FOOTPRINT.map((fp, i) => (
+          {c.footprint.map((fp, i) => (
             <div key={i} style={{ display: "flex", alignItems: "center", gap: 8, background: t.card, border: `0.5px solid ${t.border}`, borderRadius: 8, padding: "8px 14px" }}>
               <span style={{ fontSize: 11, color: t.accent }}>{fp.icon}</span>
               <div>
@@ -290,21 +336,19 @@ export default function Portfolio() {
         </div>
 
         {/* AREAS */}
-        <SectionDivider label="Areas" t={t} sans={sans} />
+        <SectionDivider label={c.sectionAreas} t={t} sans={sans} />
         <div style={{ display: "flex", flexWrap: "wrap", gap: 7, marginBottom: 64 }}>
-          {PILLS_ACCENT.map((p, i) => (
+          {c.pillsAccent.map((p, i) => (
             <span key={i} style={{ fontFamily: sans, fontSize: 12, padding: "6px 14px", borderRadius: 999, border: `0.5px solid ${t.accentBorder}`, color: t.accentText, background: t.accentFaint }}>{p}</span>
           ))}
-          {PILLS_PLAIN.map((p, i) => (
+          {c.pillsPlain.map((p, i) => (
             <span key={i} style={{ fontFamily: sans, fontSize: 12, padding: "6px 14px", borderRadius: 999, border: `0.5px solid ${t.border}`, color: t.textSub, background: t.card }}>{p}</span>
           ))}
         </div>
 
         {/* BEYOND */}
         <div style={{ borderTop: `0.5px solid ${t.border}`, borderBottom: `0.5px solid ${t.border}`, padding: "24px 0", marginBottom: 56 }}>
-          <p style={{ fontFamily: serif, fontSize: 14, fontStyle: "italic", color: t.textMuted, lineHeight: 1.8, margin: 0 }}>
-            Outside the office — family, cooking, open spaces and the occasional idea that starts on a walk and ends up in a prototype.
-          </p>
+          <p style={{ fontFamily: serif, fontSize: 14, fontStyle: "italic", color: t.textMuted, lineHeight: 1.8, margin: 0 }}>{c.beyond}</p>
         </div>
 
         {/* FOOTER */}
@@ -317,9 +361,7 @@ export default function Portfolio() {
             style={{ fontFamily: sans, fontSize: 11, letterSpacing: "0.08em", color: t.textMuted, textDecoration: "none", textTransform: "uppercase" }}>
             ↓ CV
           </a>
-          <span style={{ marginLeft: "auto", fontFamily: sans, fontSize: 11, color: t.textMuted, letterSpacing: "0.06em" }}>
-            Madrid, Spain
-          </span>
+          <span style={{ marginLeft: "auto", fontFamily: sans, fontSize: 11, color: t.textMuted, letterSpacing: "0.06em" }}>{c.footerLoc}</span>
         </div>
 
       </div>
