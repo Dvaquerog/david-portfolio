@@ -161,7 +161,7 @@ export default function Portfolio() {
               <span style={{ color: t.accent }}>García</span>
             </h1>
 
-            <p style={{ fontFamily: serif, fontSize: 17, fontStyle: "italic", color: t.textSub, lineHeight: 1.6, borderLeft: `2px solid ${t.accent}`, paddingLeft: 16, maxWidth: 400, marginBottom: 28 }}>
+            <p style={{ fontFamily: serif, fontSize: 17, fontStyle: "italic", color: t.textSub, lineHeight: 1.6, borderLeft: `2px solid ${t.accent}`, paddingLeft: 16, marginBottom: 28 }}>
               Simplifying data.<br />
               <span style={{ color: t.accent }}>Amplifying impact.</span>
             </p>
