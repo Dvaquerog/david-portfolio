@@ -36,9 +36,9 @@ const CARDS = [
 ];
 
 const LEADERSHIP = [
-  { title: "Transparency first", body: "Creating space where teams feel safe to test ideas, take controlled risks and speak up — while keeping a clear eye on impact." },
-  { title: "Flexibility with accountability", body: "Results matter more than rigid schedules. I trust people to own their work and deliver — and I give them the conditions to do it." },
-  { title: "Leading by example", body: "I stay close to the work — shaping frameworks, unblocking problems, and helping the team move faster and with more confidence." },
+  { title: "Leading by example", body: "I stay close to the work — shaping frameworks, unblocking problems, and helping the team move faster and with more confidence. Always keen to join initiatives hands-on when needed to understand real delivery challenges and stay close to the team's day-to-day." },
+  { title: "Transparency first", body: "Creating space where teams feel safe to test ideas, take controlled risks and speak up — while keeping a clear eye on impact. I believe honest, constructive feedback flows in every direction — people grow when they hear the truth delivered with care." },
+  { title: "Flexibility with accountability", body: "Results matter more than rigid schedules or extreme presenteeism. I trust people to own their work and deliver — and I give them the conditions to do it." },
 ];
 
 const FOOTPRINT = [
@@ -187,7 +187,7 @@ export default function Portfolio() {
 
         {/* BIO */}
         <p style={{ fontFamily: sans, fontSize: 15, color: t.textSub, lineHeight: 1.85, marginBottom: 64, maxWidth: 640 }}>
-          I've spent 10+ years in online business — Travel Tech and EdTech — leading analytical teams and managing categories across Spain, Portugal and Latam. I've worked across every stage of the user lifecycle: from first acquisition to retention, billing, service experience and multichannel communication.
+          I've spent 10+ years in online business — Travel Tech and EdTech — leading analytical teams and managing categories across Spain, Portugal and Latam. I've worked across every stage of the user lifecycle: from first acquisition to retention, billing, revenue management, service experience and multichannel communication.
           <br /><br />
           That end-to-end view taught me something:{" "}
           <span style={{ color: t.text, fontWeight: 500 }}>the bottleneck is rarely the data itself.</span>{" "}
