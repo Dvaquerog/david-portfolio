@@ -263,8 +263,10 @@ export default function Portfolio() {
           {c.stats.map((st, i) => (
             <div key={i} style={{ background: st.highlight ? t.accentFaint : t.card, border: `0.5px solid ${st.highlight ? t.accentBorder : t.border}`, borderRadius: 10, padding: "18px 12px", textAlign: "center" }}>
               {st.highlight ? (
-                <div style={{ fontFamily: sans, fontSize: 11, fontWeight: 500, color: t.accentText, lineHeight: 1.5, letterSpacing: "0.02em" }}>
-                  {st.num.split("\n").map((l, j) => <div key={j}>{l}</div>)}
+                <div>
+                  <div style={{ fontFamily: serif, fontSize: 18, fontWeight: 400, color: t.accentText, lineHeight: 1.25, letterSpacing: "-0.01em" }}>
+                    {st.num.split("\n").map((l, j) => <div key={j}>{l}</div>)}
+                  </div>
                 </div>
               ) : (
                 <>
