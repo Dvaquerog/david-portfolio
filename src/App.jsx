@@ -291,14 +291,14 @@ export default function Portfolio() {
 
         {/* WHAT I BRING */}
         <SectionDivider label={c.sectionBring} t={t} sans={sans} />
-        <div className="cards-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(165px, 1fr))", gap: 12, marginBottom: 64 }}>
+        <div className="cards-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 12, marginBottom: 64 }}>
           {c.cards.map((card, i) => (
-            <div key={i} style={{ background: card.inProgress ? t.warnBg : t.card, border: `0.5px solid ${card.inProgress ? t.warnBorder : t.border}`, borderRadius: 12, padding: "20px 18px", display: "flex", flexDirection: "column", gap: 10 }}>
-              <div style={{ fontFamily: sans, fontSize: 10, fontWeight: 600, letterSpacing: "0.14em", color: card.inProgress ? t.warn : t.accent, opacity: card.inProgress ? 1 : 0.7 }}>{card.num}</div>
-              <div style={{ fontFamily: sans, fontSize: 13, fontWeight: 500, color: card.inProgress ? t.warn : t.text, lineHeight: 1.3 }}>{card.title}</div>
-              <div style={{ fontFamily: sans, fontSize: 12, color: card.inProgress ? t.warn : t.textSub, lineHeight: 1.6, opacity: card.inProgress ? 0.85 : 1, flex: 1 }}>{card.body}</div>
+            <div key={i} style={{ background: card.inProgress ? "#F5F5F5" : t.card, border: `0.5px solid ${card.inProgress ? "#BFDBFE" : t.border}`, borderRadius: 12, padding: "20px 18px", display: "flex", flexDirection: "column", gap: 10 }}>
+              <div style={{ fontFamily: sans, fontSize: 10, fontWeight: 600, letterSpacing: "0.14em", color: card.inProgress ? "#6B9EC7" : t.accent, opacity: card.inProgress ? 1 : 0.7 }}>{card.num}</div>
+              <div style={{ fontFamily: sans, fontSize: 13, fontWeight: 500, color: card.inProgress ? "#6B9EC7" : t.text, lineHeight: 1.3 }}>{card.title}</div>
+              <div style={{ fontFamily: sans, fontSize: 12, color: card.inProgress ? "#6B9EC7" : t.textSub, lineHeight: 1.6, opacity: card.inProgress ? 0.75 : 1, flex: 1 }}>{card.body}</div>
               {card.inProgress && (
-                <span style={{ alignSelf: "flex-start", fontFamily: sans, fontSize: 9, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", padding: "3px 9px", borderRadius: 999, background: t.warnBg, border: `0.5px solid ${t.warnBorder}`, color: t.warn }}>
+                <span style={{ alignSelf: "flex-start", fontFamily: sans, fontSize: 9, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", padding: "3px 9px", borderRadius: 999, background: "#F5F5F5", border: "0.5px solid #BFDBFE", color: "#6B9EC7" }}>
                   {card.badge}
                 </span>
               )}
