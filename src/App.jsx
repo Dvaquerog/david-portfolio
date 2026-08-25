@@ -17,7 +17,7 @@ const T = {
 
 const LIFECYCLE = [
   "Strategy & competition","Acquisition","UX / UI","Multichannel comms",
-  "Conversion","Retention","Billing","Service experience",
+  "Conversion","Retention","Revenue management","Service experience",
 ];
 
 const STATS = [
@@ -59,19 +59,28 @@ function VennDiagram({ t, size = 220 }) {
         <clipPath id="c1"><circle cx="130" cy="72" r="70"/></clipPath>
         <clipPath id="c2"><circle cx="90" cy="148" r="70"/></clipPath>
         <clipPath id="c3"><circle cx="170" cy="148" r="70"/></clipPath>
+        <clipPath id="c12">
+          <rect x="0" y="0" width="260" height="220"/>
+        </clipPath>
       </defs>
+      {/* Circles outline only */}
       <circle cx="130" cy="72" r="70" fill="none" stroke={t.accentBorder} strokeWidth="0.8"/>
       <circle cx="90" cy="148" r="70" fill="none" stroke={t.accentBorder} strokeWidth="0.8"/>
       <circle cx="170" cy="148" r="70" fill="none" stroke={t.accentBorder} strokeWidth="0.8"/>
-      <circle cx="130" cy="72" r="70" fill={t.accent} fillOpacity="0.12" clipPath="url(#c2)"/>
-      <circle cx="130" cy="72" r="70" fill={t.accent} fillOpacity="0.12" clipPath="url(#c3)"/>
-      <circle cx="90" cy="148" r="70" fill={t.accent} fillOpacity="0.12" clipPath="url(#c3)"/>
-      <circle cx="130" cy="72" r="70" fill={t.accent} fillOpacity="0.85" clipPath="url(#c2)"/>
-      <path d="M130,72 Q150,100 170,148 Q130,165 90,148 Q110,100 130,72Z" fill={t.accent} fillOpacity="0.9"/>
-      <text x="130" y="42" textAnchor="middle" fontSize="11" fontFamily="'Helvetica Neue',sans-serif" letterSpacing="0.1em" fill={t.textSub} fontWeight="400">BUSINESS</text>
-      <text x="55" y="175" textAnchor="middle" fontSize="11" fontFamily="'Helvetica Neue',sans-serif" letterSpacing="0.1em" fill={t.textSub} fontWeight="400">DATA</text>
-      <text x="205" y="175" textAnchor="middle" fontSize="11" fontFamily="'Helvetica Neue',sans-serif" letterSpacing="0.1em" fill={t.textSub} fontWeight="400">AI</text>
-      <text x="130" y="120" textAnchor="middle" fontSize="13" fontFamily="'Georgia',serif" fill={t.cardStrong} fontWeight="700" letterSpacing="0.06em">IMPACT</text>
+      {/* Three petals — each is intersection of exactly two circles, drawn once with same opacity */}
+      {/* Petal top: c1 ∩ c2 */}
+      <circle cx="130" cy="72" r="70" fill={t.accent} fillOpacity="0.82" clipPath="url(#c2)"/>
+      {/* Petal bottom-left: c2 ∩ c3 */}
+      <circle cx="90" cy="148" r="70" fill={t.accent} fillOpacity="0.82" clipPath="url(#c3)"/>
+      {/* Petal bottom-right: c1 ∩ c3 */}
+      <circle cx="170" cy="148" r="70" fill={t.accent} fillOpacity="0.82" clipPath="url(#c1)"/>
+
+      {/* Labels halfway between circle center and outer edge */}
+      <text x="130" y="44" textAnchor="middle" dominantBaseline="middle" fontSize="11" fontFamily="'Helvetica Neue',sans-serif" letterSpacing="0.1em" fill={t.textSub} fontWeight="400">BUSINESS</text>
+      <text x="68" y="172" textAnchor="middle" dominantBaseline="middle" fontSize="11" fontFamily="'Helvetica Neue',sans-serif" letterSpacing="0.1em" fill={t.textSub} fontWeight="400">DATA</text>
+      <text x="192" y="172" textAnchor="middle" dominantBaseline="middle" fontSize="11" fontFamily="'Helvetica Neue',sans-serif" letterSpacing="0.1em" fill={t.textSub} fontWeight="400">AI</text>
+      {/* IMPACT label */}
+      <text x="130" y="122" textAnchor="middle" fontSize="13" fontFamily="'Georgia',serif" fill="#FFFFFF" fontWeight="700" letterSpacing="0.06em">IMPACT</text>
     </svg>
   );
 }
@@ -143,7 +152,7 @@ export default function Portfolio() {
               </div>
               <div>
                 <p style={{ fontFamily: sans, fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: t.textMuted, marginBottom: 4 }}>Lead Business Analyst</p>
-                <p style={{ fontFamily: sans, fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: t.textMuted }}>Category Manager · MSc AI (in progress)</p>
+                <p style={{ fontFamily: sans, fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: t.textMuted }}>Category Manager · Applied AI for Business</p>
               </div>
             </div>
 
@@ -176,8 +185,8 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <div className="venn-wrap" style={{ flexShrink: 0 }}>
-            <VennDiagram t={t} size={180} />
+          <div className="venn-wrap" style={{ flexShrink: 0, margin: "-10px -10px -10px 0" }}>
+            <VennDiagram t={t} size={240} />
           </div>
         </div>
 
@@ -187,7 +196,7 @@ export default function Portfolio() {
 
         {/* BIO */}
         <p style={{ fontFamily: sans, fontSize: 15, color: t.textSub, lineHeight: 1.85, marginBottom: 64, maxWidth: 640 }}>
-          I've spent 10+ years in online business — Travel Tech and EdTech — leading analytical teams and managing categories across Spain, Portugal and Latam. I've worked across every stage of the user lifecycle: from first acquisition to retention, billing, revenue management, service experience and multichannel communication.
+          I've spent 10+ years in online business — Travel Tech and EdTech — leading analytical teams and managing categories across Spain, Portugal and Latam. I've worked across every stage of the user lifecycle: from first acquisition to retention, revenue management, service experience and multichannel communication.
           <br /><br />
           That end-to-end view taught me something:{" "}
           <span style={{ color: t.text, fontWeight: 500 }}>the bottleneck is rarely the data itself.</span>{" "}
