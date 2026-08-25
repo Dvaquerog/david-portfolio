@@ -46,6 +46,7 @@ const CONTENT = {
       { num: "02", title: "Team leadership", body: "10+ years building and leading analytical teams across two industries and multiple markets." },
       { num: "03", title: "Pricing & P&L", body: "Metasearch, pricing optimization and P&L ownership in competitive travel markets." },
       { num: "04", title: "AI applied to business", body: "Using AI to unlock real impact through data — building scalable systems that align metrics, ensure data quality and turn insight into action.", inProgress: true, badge: "in progress" },
+      { num: "05", title: "Right tool, right job", body: "Not every data problem needs a cutting-edge solution. Sometimes a clean spreadsheet does the job. Sometimes it's a one-off extract, a full dashboard, or an AI-powered agent. The skill is knowing which one — and not over-engineering what doesn't need it." },
     ],
     sectionLead: "How I lead",
     leadership: [
@@ -62,8 +63,8 @@ const CONTENT = {
       { icon: "◆", text: "London, UK", sub: "work" },
     ],
     sectionAreas: "Areas",
-    pillsAccent: ["Impact-driven analysis", "Team leadership", "Category Management", "Business Analysis"],
-    pillsPlain: ["Pricing & P&L", "Metric governance", "Multichannel communications", "Travel Tech · EdTech", "User lifecycle", "Data storytelling"],
+    pillsAccent: ["Impact-driven analysis", "Team leadership", "Business Analysis", "Category Management"],
+    pillsPlain: ["Revenue management", "Pricing & P&L", "Metric governance", "Data storytelling", "Multichannel communications", "UX/UI & CRO", "Competitive intelligence", "Travel Tech · EdTech", "User lifecycle"],
     beyond: "Outside the office — family, cooking, open spaces and the occasional idea that starts on a walk and ends up in a prototype.",
     footerLoc: "Madrid, Spain",
     toggleLang: "ES",
@@ -100,6 +101,7 @@ const CONTENT = {
       { num: "02", title: "Liderazgo de equipos", body: "Más de 10 años construyendo y liderando equipos de analítica en dos industrias y múltiples mercados." },
       { num: "03", title: "Pricing y P&L", body: "Metasearch, optimización de pricing y ownership del P&L en mercados de viajes altamente competitivos." },
       { num: "04", title: "IA aplicada al negocio", body: "Usar la IA para desbloquear impacto real a través del dato — construyendo sistemas escalables que alinean métricas, aseguran la calidad del dato y convierten el insight en acción.", inProgress: true, badge: "en desarrollo" },
+      { num: "05", title: "La herramienta adecuada para cada problema", body: "No todo problema de datos necesita una solución sofisticada. A veces un Excel bien hecho resuelve. Otras veces es una extracción puntual, un dashboard completo o un agente con IA. La clave está en saber cuál corresponde — y no sobreingenierar lo que no lo necesita." },
     ],
     sectionLead: "Cómo lidero",
     leadership: [
@@ -116,8 +118,8 @@ const CONTENT = {
       { icon: "◆", text: "Londres, Reino Unido", sub: "trabajo" },
     ],
     sectionAreas: "Áreas",
-    pillsAccent: ["Análisis orientado al impacto", "Liderazgo de equipos", "Gestión de categorías", "Análisis de negocio"],
-    pillsPlain: ["Pricing y P&L", "Gobernanza de métricas", "Comunicación multicanal", "Travel Tech · EdTech", "Ciclo de vida del usuario", "Data storytelling"],
+    pillsAccent: ["Análisis orientado al impacto", "Liderazgo de equipos", "Análisis de negocio", "Gestión de categorías"],
+    pillsPlain: ["Revenue management", "Pricing y P&L", "Gobernanza de métricas", "Data storytelling", "Comunicación multicanal", "UX/UI & CRO", "Inteligencia competitiva", "Travel Tech · EdTech", "Ciclo de vida del usuario"],
     beyond: "Fuera de la oficina — familia, cocina, espacios abiertos y alguna idea que empieza en un paseo y acaba en un prototipo.",
     footerLoc: "Madrid, España",
     toggleLang: "EN",
@@ -276,17 +278,14 @@ export default function Portfolio() {
           ))}
         </div>
 
-        {/* LIFECYCLE */}
-        <SectionDivider label={c.sectionLifecycle} t={t} sans={sans} />
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 6, alignItems: "center", marginBottom: 64 }}>
-          {c.lifecycle.map((item, i) => (
-            <div key={i} style={{ display: "flex", alignItems: "center", gap: 6 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 7, background: t.card, border: `0.5px solid ${t.border}`, borderRadius: 999, padding: "5px 13px" }}>
-                <span style={{ fontFamily: sans, fontSize: 10, letterSpacing: "0.06em", color: t.accent, fontWeight: 600, opacity: 0.6 }}>{String(i + 1).padStart(2, "0")}</span>
-                <span style={{ fontFamily: sans, fontSize: 11, color: t.textSub }}>{item}</span>
-              </div>
-              {i < c.lifecycle.length - 1 && <span style={{ fontSize: 10, color: t.textMuted }}>›</span>}
-            </div>
+        {/* AREAS */}
+        <SectionDivider label={c.sectionAreas} t={t} sans={sans} />
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 7, marginBottom: 64 }}>
+          {c.pillsAccent.map((p, i) => (
+            <span key={i} style={{ fontFamily: sans, fontSize: 12, padding: "6px 14px", borderRadius: 999, border: `0.5px solid ${t.accentBorder}`, color: t.accentText, background: t.accentFaint }}>{p}</span>
+          ))}
+          {c.pillsPlain.map((p, i) => (
+            <span key={i} style={{ fontFamily: sans, fontSize: 12, padding: "6px 14px", borderRadius: 999, border: `0.5px solid ${t.border}`, color: t.textSub, background: t.card }}>{p}</span>
           ))}
         </div>
 
@@ -332,17 +331,6 @@ export default function Portfolio() {
                 <div style={{ fontFamily: sans, fontSize: 10, color: t.textMuted, letterSpacing: "0.04em" }}>{fp.sub}</div>
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* AREAS */}
-        <SectionDivider label={c.sectionAreas} t={t} sans={sans} />
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 7, marginBottom: 64 }}>
-          {c.pillsAccent.map((p, i) => (
-            <span key={i} style={{ fontFamily: sans, fontSize: 12, padding: "6px 14px", borderRadius: 999, border: `0.5px solid ${t.accentBorder}`, color: t.accentText, background: t.accentFaint }}>{p}</span>
-          ))}
-          {c.pillsPlain.map((p, i) => (
-            <span key={i} style={{ fontFamily: sans, fontSize: 12, padding: "6px 14px", borderRadius: 999, border: `0.5px solid ${t.border}`, color: t.textSub, background: t.card }}>{p}</span>
           ))}
         </div>
 
