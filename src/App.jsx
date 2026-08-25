@@ -42,11 +42,11 @@ const CONTENT = {
     lifecycle: ["Strategy & competition","Acquisition","UX / UI","Multichannel comms","Conversion","Retention","Revenue management","Service experience"],
     sectionBring: "What I bring",
     cards: [
-      { num: "01", title: "Impact-driven analysis", body: "Every insight pushed until it changes a decision. Not dashboards for the sake of it." },
-      { num: "02", title: "Team leadership", body: "10+ years building and leading analytical teams across two industries and multiple markets." },
-      { num: "03", title: "Pricing & P&L", body: "Metasearch, pricing optimization and P&L ownership in competitive travel markets." },
-      { num: "04", title: "Right tool, right job", body: "Not every data problem needs a sophisticated solution. Sometimes a clean spreadsheet does the job, sometimes it's a full dashboard or an AI agent. The skill is knowing which one — and not over-engineering what doesn't need it." },
-      { num: "05", title: "AI applied to business", body: "Using AI to unlock real impact through data — building scalable systems that align metrics, ensure data quality and turn insight into action.", inProgress: true, badge: "in progress" },
+      { num: "01", icon: "ti-target-arrow", title: "Impact-driven analysis", body: "Every insight pushed until it changes a decision. Not dashboards for the sake of it." },
+      { num: "02", icon: "ti-users", title: "Team leadership", body: "10+ years building and leading analytical teams across two industries and multiple markets." },
+      { num: "03", icon: "ti-trending-up", title: "Pricing & P&L", body: "Metasearch, pricing optimization and P&L ownership in competitive travel markets." },
+      { num: "04", icon: "ti-tool", title: "Right tool, right job", body: "Not every data problem needs a sophisticated solution. Sometimes a clean spreadsheet does the job, sometimes it's a full dashboard or an AI agent. The skill is knowing which one — and not over-engineering what doesn't need it." },
+      { num: "05", icon: "ti-cpu", title: "AI applied to business", body: "Using AI to unlock real impact through data — building scalable systems that align metrics, ensure data quality and turn insight into action.", inProgress: true, badge: "in progress" },
     ],
     sectionLead: "How I lead",
     leadership: [
@@ -97,11 +97,11 @@ const CONTENT = {
     lifecycle: ["Estrategia y competencia","Captación","UX / UI","Comunicación multicanal","Conversión","Retención","Revenue management","Experiencia de servicio"],
     sectionBring: "Lo que aporto",
     cards: [
-      { num: "01", title: "Análisis orientado al impacto", body: "El esfuerzo analítico cobra sentido cuando permite tomar mejores decisiones. Información sin accionabilidad no genera impacto." },
-      { num: "02", title: "Liderazgo de equipos", body: "Más de 10 años construyendo y liderando equipos de analítica en dos industrias y múltiples mercados." },
-      { num: "03", title: "Pricing y P&L", body: "Metasearch, optimización de pricing y ownership del P&L en mercados de viajes altamente competitivos." },
-      { num: "04", title: "La herramienta adecuada para cada problema", body: "No todo problema de datos necesita una solución sofisticada. A veces un Excel bien hecho resuelve, otras veces es un dashboard completo o un agente con IA. La clave está en saber cuál corresponde — y no sobreingenierar lo que no lo necesita." },
-      { num: "05", title: "IA aplicada al negocio", body: "Usar la IA para desbloquear impacto real a través del dato — construyendo sistemas escalables que alinean métricas, aseguran la calidad del dato y convierten el insight en acción.", inProgress: true, badge: "en desarrollo" },
+      { num: "01", icon: "ti-target-arrow", title: "Análisis orientado al impacto", body: "El esfuerzo analítico cobra sentido cuando permite tomar mejores decisiones. Información sin accionabilidad no genera impacto." },
+      { num: "02", icon: "ti-users", title: "Liderazgo de equipos", body: "Más de 10 años construyendo y liderando equipos de analítica en dos industrias y múltiples mercados." },
+      { num: "03", icon: "ti-trending-up", title: "Pricing y P&L", body: "Metasearch, optimización de pricing y ownership del P&L en mercados de viajes altamente competitivos." },
+      { num: "04", icon: "ti-tool", title: "La herramienta adecuada para cada problema", body: "No todo problema de datos necesita una solución sofisticada. A veces un Excel bien hecho resuelve, otras veces es un dashboard completo o un agente con IA. La clave está en saber cuál corresponde — y no sobreingenierar lo que no lo necesita." },
+      { num: "05", icon: "ti-cpu", title: "IA aplicada al negocio", body: "Usar la IA para desbloquear impacto real a través del dato — construyendo sistemas escalables que alinean métricas, aseguran la calidad del dato y convierten el insight en acción.", inProgress: true, badge: "en desarrollo" },
     ],
     sectionLead: "Cómo lidero",
     leadership: [
@@ -171,6 +171,7 @@ export default function Portfolio() {
   return (
     <div style={{ background: t.bg, minHeight: "100vh", transition: "all 0.35s ease", color: t.text }}>
       <style>{`
+        @import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css');
         @media (max-width: 640px) {
           .hero-grid { grid-template-columns: 1fr !important; }
           .venn-wrap { display: flex !important; justify-content: center !important; margin-top: 32px !important; }
@@ -296,8 +297,8 @@ export default function Portfolio() {
         <div className="cards-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 12, marginBottom: 64 }}>
           {c.cards.map((card, i) => (
             <div key={i} style={{ background: card.inProgress ? "#F5F5F5" : t.card, border: `0.5px solid ${card.inProgress ? "#BFDBFE" : t.border}`, borderRadius: 12, padding: "20px 18px", display: "flex", flexDirection: "column", gap: 10 }}>
-              <div style={{ fontFamily: sans, fontSize: 10, fontWeight: 600, letterSpacing: "0.14em", color: card.inProgress ? "#6B9EC7" : t.accent, opacity: card.inProgress ? 1 : 0.7 }}>{card.num}</div>
-              <div style={{ fontFamily: sans, fontSize: 13, fontWeight: 500, color: card.inProgress ? "#6B9EC7" : t.text, lineHeight: 1.3 }}>{card.title}</div>
+              <i className={`ti ${card.icon}`} style={{ fontSize: 22, color: card.inProgress ? "#BFDBFE" : t.textMuted, lineHeight: 1 }} />
+              <div style={{ fontFamily: serif, fontSize: 15, fontWeight: 400, color: card.inProgress ? "#6B9EC7" : t.text, lineHeight: 1.3, letterSpacing: "-0.01em" }}>{card.title}</div>
               <div style={{ fontFamily: sans, fontSize: 12, color: card.inProgress ? "#6B9EC7" : t.textSub, lineHeight: 1.6, opacity: card.inProgress ? 0.75 : 1, flex: 1 }}>{card.body}</div>
               {card.inProgress && (
                 <span style={{ alignSelf: "flex-start", fontFamily: sans, fontSize: 9, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", padding: "3px 9px", borderRadius: 999, background: "#F5F5F5", border: "0.5px solid #BFDBFE", color: "#6B9EC7" }}>
