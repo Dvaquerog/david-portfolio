@@ -45,8 +45,8 @@ const CONTENT = {
       { num: "01", title: "Impact-driven analysis", body: "Every insight pushed until it changes a decision. Not dashboards for the sake of it." },
       { num: "02", title: "Team leadership", body: "10+ years building and leading analytical teams across two industries and multiple markets." },
       { num: "03", title: "Pricing & P&L", body: "Metasearch, pricing optimization and P&L ownership in competitive travel markets." },
-      { num: "04", title: "AI applied to business", body: "Using AI to unlock real impact through data — building scalable systems that align metrics, ensure data quality and turn insight into action.", inProgress: true, badge: "in progress" },
-      { num: "05", title: "Right tool, right job", body: "Not every data problem needs a cutting-edge solution. Sometimes a clean spreadsheet does the job. Sometimes it's a one-off extract, a full dashboard, or an AI-powered agent. The skill is knowing which one — and not over-engineering what doesn't need it." },
+      { num: "04", title: "Right tool, right job", body: "Not every data problem needs a sophisticated solution. Sometimes a clean spreadsheet does the job, sometimes it's a full dashboard or an AI agent. The skill is knowing which one — and not over-engineering what doesn't need it." },
+      { num: "05", title: "AI applied to business", body: "Using AI to unlock real impact through data — building scalable systems that align metrics, ensure data quality and turn insight into action.", inProgress: true, badge: "in progress" },
     ],
     sectionLead: "How I lead",
     leadership: [
@@ -100,8 +100,8 @@ const CONTENT = {
       { num: "01", title: "Análisis orientado al impacto", body: "El esfuerzo analítico cobra sentido cuando permite tomar mejores decisiones. Información sin accionabilidad no genera impacto." },
       { num: "02", title: "Liderazgo de equipos", body: "Más de 10 años construyendo y liderando equipos de analítica en dos industrias y múltiples mercados." },
       { num: "03", title: "Pricing y P&L", body: "Metasearch, optimización de pricing y ownership del P&L en mercados de viajes altamente competitivos." },
-      { num: "04", title: "IA aplicada al negocio", body: "Usar la IA para desbloquear impacto real a través del dato — construyendo sistemas escalables que alinean métricas, aseguran la calidad del dato y convierten el insight en acción.", inProgress: true, badge: "en desarrollo" },
-      { num: "05", title: "La herramienta adecuada para cada problema", body: "No todo problema de datos necesita una solución sofisticada. A veces un Excel bien hecho resuelve. Otras veces es una extracción puntual, un dashboard completo o un agente con IA. La clave está en saber cuál corresponde — y no sobreingenierar lo que no lo necesita." },
+      { num: "04", title: "La herramienta adecuada para cada problema", body: "No todo problema de datos necesita una solución sofisticada. A veces un Excel bien hecho resuelve, otras veces es un dashboard completo o un agente con IA. La clave está en saber cuál corresponde — y no sobreingenierar lo que no lo necesita." },
+      { num: "05", title: "IA aplicada al negocio", body: "Usar la IA para desbloquear impacto real a través del dato — construyendo sistemas escalables que alinean métricas, aseguran la calidad del dato y convierten el insight en acción.", inProgress: true, badge: "en desarrollo" },
     ],
     sectionLead: "Cómo lidero",
     leadership: [
