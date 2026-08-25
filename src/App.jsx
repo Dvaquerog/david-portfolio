@@ -195,7 +195,7 @@ export default function Portfolio() {
         <div style={{ height: 36 }} />
 
         {/* BIO */}
-        <p style={{ fontFamily: sans, fontSize: 15, color: t.textSub, lineHeight: 1.85, marginBottom: 64, maxWidth: 640 }}>
+        <p style={{ fontFamily: sans, fontSize: 15, color: t.textSub, lineHeight: 1.85, marginBottom: 64 }}>
           I've spent 10+ years in online business — Travel Tech and EdTech — leading analytical teams and managing categories across Spain, Portugal and Latam. I've worked across every stage of the user lifecycle: from first acquisition to retention, revenue management, service experience and multichannel communication.
           <br /><br />
           That end-to-end view taught me something:{" "}
